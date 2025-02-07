@@ -1,0 +1,48 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.venv/
+
+# Distribution and build files
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Logs and database
+*.log
+*.sqlite3
+*.db
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Environment variables and secrets
+.env
+*.secret
+config.json
+
+# macOS system files
+.DS_Store
+
+# Coverage and test reports
+htmlcov/
+.coverage
+*.cover
+*.py,cover
+nosetests.xml
+coverage.xml
+*.mo
+*.pot
+pytest_cache/
+tox/
