@@ -12,17 +12,14 @@ def cypher(text: str, shift: int) -> None:
     # iterate through chars in text
     for c in text:
         # skip non-letter chars
-        if not c.isalpha():
-            continue
+        if c.isalpha():
+            # encode char by shifting
+            # get base char of 'a'/'A' (same case as c)
+            a: int = ord('a' if c.islower() else 'A')
 
-        # encode char by shifting
-        # get base char of a with proper case
-        a: int = ord('a' if c.islower() else 'A')
-
-        # shift char
-        i: int = ord(c)
-        j: int = (i + 1 - a) % 26 + a
-        c = chr(j)
+            # shift char
+            j: int = (ord(c) + shift - a) % 26 + a
+            c = chr(j)
         result += c
 
     return result
