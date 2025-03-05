@@ -10,9 +10,15 @@ class Queue:
         self.__lst.append(elem)
 
     def get(self):
+        if self.is_empty():
+            raise QueueError("Queue empty")
+
         e = self.__lst[0]
         del self.__lst[0]
         return e
+
+    def is_empty(self):
+        return not self.__lst
 
 
 que = Queue()
@@ -23,4 +29,4 @@ try:
     for i in range(4):
         print(que.get())
 except:
-    print("Queue error")
+    print("Queue empty")
